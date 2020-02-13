@@ -27,7 +27,7 @@ class Blackjack {
 }
 
 $apple = new Blackjack();
-$apple->set_hit(mt_rand(1, 11));
+$apple->set_hit(rand(1, 11));
 $apple->set_stand('0');
 $apple->set_surrender('');
 echo "Hit: " . $apple->get_hit();
@@ -36,3 +36,7 @@ echo "<br>";
 echo "Stand: " . $apple->get_stand();
 echo "<br>";
 echo "Surrender" . $apple->get_surrender();
+echo str_pad(rand(1,11), 1, "0", STR_PAD_LEFT);
+?>
+
+
