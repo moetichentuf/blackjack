@@ -36,10 +36,15 @@ echo "<br>";
 echo "Stand: " . $apple->get_stand();
 echo "<br>";
 echo "Surrender" . $apple->get_surrender();
-echo $randomNumber .$apple->get_hit();
-$firstNumber = 21;
-$randomNumber=rand(1, 11);
-$firstNumber +=$randomNumber;
+$numbers = array();
+function rand_num_generator() {
+    return rand(1,11);
+}
+
+for($i=0;$i<4;$i++) {
+    array_push($numbers, rand_num_generator());
+}
+print_r($numbers);
 
 
 
