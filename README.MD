@@ -1,12 +1,12 @@
 # **Blackjack (OOP)**
-1.  create a class called Blackjack in the file blackjack.php. **DONE**
-2.  Add three methods to this class: **DONE**
+1.  create a class called Blackjack in the file blackjack.php. **(DONE)**
+2.  Add three methods to this class: **(DONE)**
    
     -   Hit
     -   Stand
     -   Surrender
 
-3.  Hit should add a card between 1-11.
+3.  Hit should add a card between 1-11.**(DONE)**
 4.  Stand should end your turn and start the dealer's turn. (Your point total is saved.)
 5.  Surrender should make you surrender the game. (Dealer wins.)
 6.  Add a property to this class called score. This property should have the value of the player's score at all times.

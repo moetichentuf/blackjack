@@ -4,6 +4,7 @@ class Blackjack {
     public $hit;
     public $stand;
     public $surrender;
+
     // Methods
     function set_hit($hit) {
         $this->hit = $hit;
@@ -26,10 +27,11 @@ class Blackjack {
 }
 
 $apple = new Blackjack();
-$apple->set_hit('0');
+$apple->set_hit(mt_rand(1, 11));
 $apple->set_stand('0');
 $apple->set_surrender('');
 echo "Hit: " . $apple->get_hit();
+
 echo "<br>";
 echo "Stand: " . $apple->get_stand();
 echo "<br>";
