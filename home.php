@@ -8,6 +8,5 @@
 <input type="button" value="Start" onclick="document.location='game.php';" >
 
 
-
 </body>
 </html>
