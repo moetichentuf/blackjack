@@ -22,6 +22,7 @@ class Blackjack {
             $valuestotal = $values + $values2 + $values3;
             if ($valuestotal === 21){
                 $keepChecking = false;
+
             }
         }
         echo $values;
@@ -31,7 +32,24 @@ class Blackjack {
         echo $values3;
         echo "<br>";
         echo $valuestotal;
+        $number = 21;
+        $numbers = array();
+        $iteration = 0;
+        while($number > 0 && $iteration < 5) {
+            $sub_number = rand(1,$number);
+            if (in_array($sub_number, $numbers)) {
+                continue;
+            }
+            $iteration++;
+            $number -= $sub_number;
+            $numbers[] = $sub_number;
+        }
 
+        if ($number != 0) {
+            $numbers[] = $number;
+        }
+
+        print_r($numbers);
 
     }
     function get_hit() {
@@ -58,7 +76,7 @@ $apple->set_stand('0');
 $apple->set_surrender('');
 echo " 
 <form method=\"post\" action=\"\">
-<input type=\"Submit\" name=\"valuestotal\" value=\"Submit\">
+<input type=\"Submit\" name=\"hit\" value=\"Submit\">
 </form> " . $apple->get_hit();
 
 echo "<br>";
