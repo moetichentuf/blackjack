@@ -10,32 +10,10 @@ class Blackjack {
     function set_hit($hit) {
         $this->hit = $hit;
 
-        $keepChecking = true;
-        $values = 0;
-        $values2 = 0;
-        $values3 = 0;
-        $valuestotal = 0;
-        while($keepChecking){
-            $values = rand(1, 11);
-            $values2 = rand(1, 11);
-            $values3 = rand(1, 11);
-            $valuestotal = $values + $values2 + $values3;
-            if ($valuestotal === 21){
-                $keepChecking = false;
-
-            }
-        }
-        echo $values;
-        echo '<br>';
-        echo $values2;
-        echo '<br>';
-        echo $values3;
-        echo "<br>";
-        echo $valuestotal;
         $number = 21;
         $numbers = array();
         $iteration = 0;
-        while($number > 0 && $iteration < 5) {
+        while($number > 0 && $iteration < 2) {
             $sub_number = rand(1,$number);
             if (in_array($sub_number, $numbers)) {
                 continue;
@@ -45,11 +23,11 @@ class Blackjack {
             $numbers[] = $sub_number;
         }
 
-        if ($number != 0) {
+        if ($number < 11) {
             $numbers[] = $number;
         }
 
-        print_r($numbers);
+        echo $numbers[0]+= $numbers[1];
 
     }
     function get_hit() {
