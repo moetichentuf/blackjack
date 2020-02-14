@@ -27,20 +27,25 @@ class Blackjack {
         return $this->surrender;
     }
 }
-$numbers = array();
+
+$count=0;
+$i=0;
+$target=99;
+
+while( $i!=$target ){
+    $i=rand(1,100);
+    $count++;
+}
+printf('it took %u attempts to reach %u',$count,$target);
+
+
+
 $apple = new Blackjack();
 $apple->set_hit('');
 $apple->set_stand('0');
 $apple->set_surrender('');
 echo "<button type=\"button\" value=\"Start\" >Hit</button> " . $apple->get_hit();
-function rand_num_generator() {
-    return rand(1,11);
-}
 
-for($i=0;$i<4;$i++) {
-    array_push($numbers, rand_num_generator());
-}
-print_r($numbers);
 echo "<br>";
 echo "<button type=\"button\" value=\"Start\" >Stand</button>" . $apple->get_stand();
 echo "<br>";
