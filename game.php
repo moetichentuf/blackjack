@@ -56,7 +56,10 @@ $apple = new Blackjack();
 $apple->set_hit('');
 $apple->set_stand('0');
 $apple->set_surrender('');
-echo " <input type=\"submit\" name=\"select\" value=\"select\" onclick=\"select()\" /> " . $apple->get_hit();
+echo " 
+<form method=\"post\" action=\"\">
+<input type=\"Submit\" name=\"valuestotal\" value=\"Submit\">
+</form> " . $apple->get_hit();
 
 echo "<br>";
 echo "<button type=\"button\" value=\"Start\" >Stand</button>" . $apple->get_stand();
